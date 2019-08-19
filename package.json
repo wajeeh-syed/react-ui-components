@@ -1,0 +1,49 @@
+{
+  "name": "@hsyed/react-ui-components",
+  "version": "0.0.1",
+  "description": "React UI Components",
+  "main": "build/index.js",
+  "scripts": {
+    "dev": "watch 'npm run build' src",
+    "build": "babel src -d build",
+    "test": "jest --color",
+    "test:watch": "npm test -- --watch",
+    "prepublish": "npm run build"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hafeez-syed/react-ui-components.git"
+  },
+  "keywords": [
+    "react",
+    "bootstrap",
+    "ui",
+    "component"
+  ],
+  "author": "Hafeez Syed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hafeez-syed/react-ui-components/issues"
+  },
+  "homepage": "https://github.com/hafeez-syed/react-ui-components#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "jest": "^24.9.0",
+    "watch": "^1.0.2"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "classnames": "^2.2.6",
+    "no-op": "^1.0.3",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  }
+}
