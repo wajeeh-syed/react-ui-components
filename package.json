@@ -4,12 +4,21 @@
   "description": "React UI Components",
   "main": "build/index.js",
   "scripts": {
-    "dev": "watch 'npm run build' src",
-    "build": "babel src -d build",
-    "test": "jest --color",
-    "test:watch": "npm test -- --watch",
-    "prepublish": "npm run build",
+    "build": "webpack --config ./webpack.prod.ts",
+    "build-ts": "tsc",
+    "dev": "webpack-dev-server --config ./webpack.dev.ts --colors --open",
+    "dev:hot": "npm run dev -- --hot",
+    "start": "npm run dev:hot",
+    "test": "jest --config ./jest.config.js",
+    "test:watch": "npm run test -- --watch",
+    "lint": "eslint ./src/**/*.tsx",
+    "lint-fix": "eslint --fix ./src/**/*.tsx",
     "release": "np"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   },
   "repository": {
     "type": "git",
@@ -19,7 +28,8 @@
     "react",
     "bootstrap",
     "ui",
-    "component"
+    "component",
+    "webpack"
   ],
   "contributors": [
     "Hafeez Syed"
@@ -32,13 +42,33 @@
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
+    "@babel/plugin-external-helpers": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/polyfill": "^7.4.4",
     "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
+    "@babel/register": "7.5.5",
+    "@hot-loader/react-dom": "^16.9.0",
     "@types/enzyme": "^3.10.3",
     "@types/enzyme-adapter-react-16": "^1.0.5",
-    "@types/jest": "^24.0.15",
+    "@types/jest": "^24.0.18",
     "@types/webpack": "^4.39.0",
-    "@types/webpack-dev-server": "^3.1.7",    
+    "@types/webpack-dev-server": "^3.1.7",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-plugin-dynamic-import-node": "^2.3.0",
+    "babel-plugin-transform-dynamic-import": "^2.1.0",
     "enzyme": "3.10.0",
+    "enzyme-to-json": "^3.4.0",
+    "eslint": "^6.2.1",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-prettier": "^3.1.0",
     "file-loader": "^4.2.0",
     "husky": "^3.0.4",
     "jest": "^24.9.0",
@@ -46,7 +76,7 @@
     "prettier": "^1.18.2",
     "react-axe": "^3.2.0",
     "react-hot-loader": "^4.12.11",
-    "react-test-renderer": "^16.8.6",
+    "react-test-renderer": "^16.9.0",
     "source-map-loader": "^0.2.4",
     "typescript": "^3.5.3",
     "watch": "^1.0.2",

@@ -1,16 +1,20 @@
 {
   "compilerOptions": {
+    "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "alwaysStrict": false,
     "downlevelIteration": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
-    "jsx": "react",
-    "lib": ["es2015", "dom"],
-    "module": "commonjs",
+    "jsx": "react-native",
+    "lib": [
+      "es2015",
+      "dom"
+    ],
+    "module": "es6",
     "moduleResolution": "node",
     "noImplicitAny": false,
-    "outDir": "./dist/",
+    "outDir": "./build/",
     "preserveConstEnums": true,
     "skipLibCheck": true,
     "strict": false,
@@ -19,9 +23,17 @@
     "target": "es5",
     "baseUrl": "./src",
     "paths": {
-      "@module-error/*": ["your/long/very/long/path/here/*"]
+      "@module-error/*": [
+        "your/long/very/long/path/here/*"
+      ]
     }
   },
-  "include": ["./src/*.tsx", "src/index.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "./src/**/*.tsx",
+    "./src/**/*.js"
+  ],
+  "exclude": [
+    "node_modules",
+    "src/**/*.test.tsx"
+  ]
 }
