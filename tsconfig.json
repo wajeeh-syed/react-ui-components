@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "alwaysStrict": false,
+    "downlevelIteration": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "jsx": "react",
+    "lib": ["es2015", "dom"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "outDir": "./dist/",
+    "preserveConstEnums": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "sourceMap": true,
+    "strictNullChecks": false,
+    "target": "es5",
+    "baseUrl": "./src",
+    "paths": {
+      "@module-error/*": ["your/long/very/long/path/here/*"]
+    }
+  },
+  "include": ["./src/*.tsx", "src/index.tsx"],
+  "exclude": ["node_modules"]
+}
