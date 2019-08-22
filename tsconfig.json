@@ -7,7 +7,10 @@
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "jsx": "react",
-    "lib": ["es2015", "dom"],
+    "lib": [
+      "es2015",
+      "dom"
+    ],
     "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitAny": false,
@@ -20,9 +23,16 @@
     "target": "es5",
     "baseUrl": "./src",
     "paths": {
-      "@module-error/*": ["your/long/very/long/path/here/*"]
+      "@module-error/*": [
+        "your/long/very/long/path/here/*"
+      ]
     }
   },
-  "include": ["./src/**/*.tsx", "./src/**/*.js"],
-  "exclude": ["node_modules", "src/**/*.test.tsx"]
+  "include": [
+    "./src/**/*.tsx",
+    "./src/**/*.js"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

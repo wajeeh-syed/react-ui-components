@@ -2,7 +2,7 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 
 interface InputFieldProps {
-  placeholder: string;
+  placeholder?: string;
 }
 
 const InputField: React.FunctionComponent<InputFieldProps> = ({
@@ -18,7 +18,7 @@ InputField.propTypes = {
 };
 
 InputField.defaultProps = {
-  placeholder: ''
+  placeholder: 'Some text here'
 };
 
 export { InputField as default, InputField };

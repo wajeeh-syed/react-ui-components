@@ -1,4 +1,6 @@
 import { Checkbox } from './Checkbox';
 import { InputField } from './InputField';
 
-export { Checkbox, InputField };
+const ind = () => 'Hello World';
+
+export { ind, Checkbox, InputField };
