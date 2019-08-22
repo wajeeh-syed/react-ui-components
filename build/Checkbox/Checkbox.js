@@ -23,7 +23,8 @@ exports.Checkbox = Checkbox;
 Checkbox.propTypes = {
     checked: prop_types_1.default.bool,
     label: prop_types_1.default.string.isRequired,
-    handleClick: prop_types_1.default.func.isRequired
+    handleClick: prop_types_1.default.func.isRequired,
+    handleKeyUp: prop_types_1.default.func.isRequired
 };
 Checkbox.defaultProps = {
     checked: true
