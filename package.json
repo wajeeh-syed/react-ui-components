@@ -22,8 +22,7 @@
     }
   },
   "files": [
-    "build",
-    "src"
+    "build"
   ],
   "repository": {
     "type": "git",
@@ -40,7 +39,7 @@
   "contributors": [
     "Hafeez Syed"
   ],
-  "license": "UNLICENSED",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/hafeez-syed/react-ui-components/issues"
   },
