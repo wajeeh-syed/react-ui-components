@@ -1,5 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
+import noop from 'no-op';
 
 interface CheckboxProps {
   checked: boolean;
@@ -15,8 +16,8 @@ const Checkbox: React.FunctionComponent<CheckboxProps> = ({
   handleKeyUp
 }) => (
   <div
-    className={checked ? 'Checkbox-container checked' : 'Checkbox-container'}
-    onClick={handleClick}
+    className={checked ? 'checkbox-container checked' : 'checkbox-container'}
+    onChange={handleClick}
     onKeyUp={handleKeyUp}
     role="button"
     tabIndex={0}
@@ -33,11 +34,13 @@ Checkbox.propTypes = {
   checked: PropTypes.bool,
   label: PropTypes.string.isRequired,
   handleClick: PropTypes.func.isRequired,
-  handleKeyUp: PropTypes.func.isRequired
+  handleKeyUp: PropTypes.func
 };
 
 Checkbox.defaultProps = {
-  checked: true
+  checked: false,
+  handleClick: noop,
+  handleKeyUp: noop
 };
 
 export { Checkbox as default, Checkbox };

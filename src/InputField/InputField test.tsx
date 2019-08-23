@@ -32,7 +32,7 @@ describe('<InputField />', () => {
 
   it('should return correct className after mount', () => {
     const props = { placeholder: 'a new text' };
-    wrapper = mount(<InputField {...props} />);
+    makeWrapper(props);
 
     expect(wrapper.find('.hero')).toHaveLength(1);
   });
