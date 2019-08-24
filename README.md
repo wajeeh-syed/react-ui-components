@@ -1,5 +1,7 @@
 # REACT UI COMPONENTS
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/hafeez-syed/react-ui-components.svg)](https://greenkeeper.io/)
+
 Install the package
 
 ```
