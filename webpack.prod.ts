@@ -5,7 +5,7 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = merge(common, {
   output: {
-    path: path.join(__dirname, 'build')
+    path: path.join(__dirname, 'dist')
   },
   optimization: {
     minimize: false

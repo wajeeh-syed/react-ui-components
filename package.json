@@ -2,27 +2,28 @@
   "name": "@hsyed/react-ui-components",
   "version": "0.0.3",
   "description": "React UI Components",
-  "main": "build/index.js",
-  "module": "build/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "scripts": {
-    "build": "webpack --config ./webpack.prod.ts",
-    "build-ts": "tsc",
+    "build": "tsc",
     "dev": "webpack-dev-server --config ./webpack.dev.ts --colors --open",
     "dev:hot": "npm run dev -- --hot",
     "start": "npm run dev:hot",
     "test": "jest --config ./jest.config.js",
     "test:watch": "npm run test -- --watch",
+    "ci": "npm run lint && npm run test -- --coverage",
+    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
     "lint": "eslint ./src/**/*.tsx",
-    "lint-fix": "eslint --fix ./src/**/*.tsx",
+    "lint:fix": "eslint --fix ./src/**/*.tsx",
     "release": "np"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint"
+      "pre-commit": "npm run lint && npm run test -- --coverage"
     }
   },
   "files": [
-    "build"
+    "dist"
   ],
   "repository": {
     "type": "git",
@@ -106,12 +107,10 @@
     "webpack-merge": "4.2.1"
   },
   "dependencies": {
-    "@types/prop-types": "^15.7.1",
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.9.0",
     "classnames": "^2.2.6",
     "no-op": "^1.0.3",
-    "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   }

@@ -5,83 +5,57 @@ import { Checkbox } from './Checkbox';
 describe('<InputField />', () => {
   let wrapper;
 
-  const makeWrapper = (
-    props = {
-      handleClick: jest.fn(),
-      checked: false,
-      label: '',
-      handleKeyUp: jest.fn()
-    }
-  ): void => {
+  const makeWrapper = (props): void => {
     wrapper = mount(<Checkbox {...props} />);
   };
 
-  xit('should return InputField with placeholder text', () => {
+  it('should return InputField with placeholder text', () => {
     const props = {
       label: 'A label for checkbox',
-      handleClick: jest.fn(),
-      checked: false,
-      handleKeyUp: jest.fn()
+      onChangeHandler: jest.fn(),
+      onKeyHandler: jest.fn()
     };
     makeWrapper(props);
 
     expect(wrapper).not.toBe(undefined);
     expect(wrapper.props().label).toBe('A label for checkbox');
-    expect(wrapper.props().handleClick).toBeTruthy();
+    expect(wrapper.props().onChangeHandler).toBeTruthy();
   });
 
-  xit('should return correct label and trigger click handler on click', () => {
+  it('should return correct label and trigger click handler on click', () => {
     const props = {
       label: 'A label for checkbox',
-      handleClick: jest.fn(),
-      checked: false,
-      handleKeyUp: jest.fn()
+      onChangeHandler: jest.fn(),
+      onKeyHandler: jest.fn()
     };
     makeWrapper(props);
 
-    wrapper.simulate('change');
+    const checkboxInput = wrapper.find('input');
 
-    expect(wrapper.props().label).toBe('a new label');
-    expect(wrapper.props().handleClick).toHaveBeenCalled();
+    checkboxInput.simulate('click', { target: { checked: true } });
+
+    expect(wrapper.props().label).toBe('A label for checkbox');
+    expect(wrapper.props().onChangeHandler).toHaveBeenCalled();
   });
 
   it('should return correct className with shallow render', () => {
     const props = {
       checked: false,
-      label: 'a new label',
-      handleClick: jest.fn(),
-      handleKeyUp: jest.fn()
+      label: 'A new label',
+      onChangeHandler: jest.fn(),
+      onKeyHandler: jest.fn()
     };
     wrapper = shallow(<Checkbox {...props} />);
 
     expect(wrapper.props().className).toBe('checkbox-container');
   });
 
-  it('should return correct className after mount', () => {
-    const props = {
-      label: 'a new text',
-      handleClick: jest.fn(),
-      handleKeyUp: jest.fn(),
-      checked: true
-    };
-    makeWrapper(props);
-
-    wrapper.simulate('change');
-
-    expect(wrapper.find('.checkbox-container.checked')).toHaveLength(1);
-  });
-
   it('should trigger keyEventHandler onKeyUp', () => {
-    const props = {
-      checked: false,
-      label: 'a new label',
-      handleClick: jest.fn(),
-      handleKeyUp: jest.fn()
-    };
+    const props = { label: 'A new label', onKeyHandler: jest.fn() };
     makeWrapper(props);
 
-    wrapper.simulate('keyup');
+    wrapper.find('input').simulate('keyup');
 
-    expect(wrapper.props().handleKeyUp).toHaveBeenCalled();
+    expect(wrapper.props().onKeyHandler).toHaveBeenCalled();
   });
 });

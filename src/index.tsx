@@ -1,6 +1,8 @@
+import * as React from 'react';
 import { Checkbox } from './Checkbox';
 import { InputField } from './InputField';
 
-const ind: string = () => 'Hello World';
+const main = (): string => `Welcome to React UI Components world`;
 
-export { ind, Checkbox, InputField };
+
+export { main, Checkbox, InputField };

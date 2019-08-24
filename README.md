@@ -10,5 +10,5 @@ Usage
 
 
 ```
-import { component-name } from '@hsyed/react-ui-components'
+import { ComponentName } from '@hsyed/react-ui-components'
 ```

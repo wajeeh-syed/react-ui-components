@@ -1,24 +1,26 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 
 interface InputFieldProps {
+  label?: string;
   placeholder?: string;
 }
 
 const InputField: React.FunctionComponent<InputFieldProps> = ({
+  label,
   placeholder
 }) => (
   <div className="hero">
-    <input type="text" placeholder={placeholder} />
+    <label htmlFor="text-field" className="label" data-label={label}>
+      {label}
+    </label>
+
+    <input id="text-field" type="text" placeholder={placeholder} />
   </div>
 );
 
-InputField.propTypes = {
-  placeholder: PropTypes.string
-};
-
 InputField.defaultProps = {
-  placeholder: 'Some text here'
+  placeholder: 'Some text here',
+  label: ''
 };
 
 export { InputField as default, InputField };

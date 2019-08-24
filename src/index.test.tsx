@@ -1,6 +1,6 @@
 
-import { ind } from './index';
+import { main } from './index';
 
 test('says hello world', () => {
-    expect(ind()).toBe('Hello World');
+    expect(main()).toBe('Welcome to React UI Components world');
 });

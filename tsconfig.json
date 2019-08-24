@@ -14,7 +14,7 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitAny": false,
-    "outDir": "./components/",
+    "outDir": "./dist/",
     "preserveConstEnums": true,
     "skipLibCheck": true,
     "strict": false,

@@ -16,5 +16,13 @@ module.exports = {
             diagnostics: false
         }
     },
-    "testRegex": "(/src/.*)test.tsx$"
+    "testRegex": "(/src/.*)test.tsx$",
+    "coverageThreshold": {
+        "global": {
+            "branches": 96,
+            "functions": 96,
+            "lines": 96,
+            "statements": -10
+        }
+    }
 };

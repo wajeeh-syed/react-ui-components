@@ -6,23 +6,17 @@ var __importStar = (this && this.__importStar) || function (mod) {
     result["default"] = mod;
     return result;
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __importStar(require("react"));
-var prop_types_1 = __importDefault(require("prop-types"));
 var InputField = function (_a) {
-    var placeholder = _a.placeholder;
+    var label = _a.label, placeholder = _a.placeholder;
     return (React.createElement("div", { className: "hero" },
-        React.createElement("input", { type: "text", placeholder: placeholder })));
+        React.createElement("label", { htmlFor: "text-field", className: "label", "data-label": label }, label),
+        React.createElement("input", { id: "text-field", type: "text", placeholder: placeholder })));
 };
 exports.default = InputField;
 exports.InputField = InputField;
-InputField.propTypes = {
-    placeholder: prop_types_1.default.string
-};
 InputField.defaultProps = {
-    placeholder: ''
+    placeholder: 'Some text here'
 };
 //# sourceMappingURL=InputField.js.map
