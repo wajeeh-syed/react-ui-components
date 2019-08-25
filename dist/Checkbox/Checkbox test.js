@@ -41,7 +41,7 @@ describe('<InputField />', function () {
         var props = {
             label: 'A label for checkbox',
             onChangeHandler: jest.fn(),
-            onKeyHandler: jest.fn(),
+            onKeyHandler: jest.fn()
         };
         makeWrapper(props);
         var checkboxInput = wrapper.find('input');

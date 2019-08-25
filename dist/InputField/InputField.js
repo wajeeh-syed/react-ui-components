@@ -17,6 +17,7 @@ var InputField = function (_a) {
 exports.default = InputField;
 exports.InputField = InputField;
 InputField.defaultProps = {
-    placeholder: 'Some text here'
+    placeholder: 'Some text here',
+    label: ''
 };
 //# sourceMappingURL=InputField.js.map

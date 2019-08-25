@@ -30,7 +30,10 @@ describe('<InputField />', function () {
     it('should return InputField with placeholder text', function () {
         makeWrapper();
         expect(wrapper).not.toBe(undefined);
-        expect(wrapper.props()).toEqual({ placeholder: 'Some text here' });
+        expect(wrapper.props()).toEqual({
+            placeholder: 'Some text here',
+            label: ''
+        });
     });
     it('should return correct placeholder', function () {
         var props = { placeholder: 'a new text' };

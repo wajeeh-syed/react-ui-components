@@ -14,7 +14,7 @@ var React = __importStar(require("react"));
 var no_op_1 = __importDefault(require("no-op"));
 var Checkbox = function (_a) {
     var label = _a.label, onChangeHandler = _a.onChangeHandler, onKeyHandler = _a.onKeyHandler;
-    return (React.createElement("div", { className: 'checkbox-container' },
+    return (React.createElement("div", { className: "checkbox-container" },
         React.createElement("input", { id: "checkbox", type: "checkbox", onClick: onChangeHandler, onKeyUp: onKeyHandler }),
         React.createElement("label", { className: "label", "data-label": label }, label)));
 };
