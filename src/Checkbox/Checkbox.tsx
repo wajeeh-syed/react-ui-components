@@ -5,22 +5,21 @@ interface CheckboxProps {
   checked?: boolean;
   label: string;
   onChangeHandler: React.MouseEventHandler<HTMLDivElement>;
-  onKeyHandler: React.KeyboardEventHandler<HTMLDivElement>;
 }
 
 const Checkbox: React.FunctionComponent<CheckboxProps> = ({
   label,
-  onChangeHandler,
-  onKeyHandler
+  onChangeHandler
 }) => (
   <div className="checkbox-container">
     <input
-      id="checkbox"
+      aria-label="checkbox"
+      title="checkbox"
+      id="cbox"
       type="checkbox"
       onClick={onChangeHandler}
-      onKeyUp={onKeyHandler}
     />
-    <label className="label" data-label={label}>
+    <label className="label" htmlFor="cbox" data-label={label}>
       {label}
     </label>
   </div>
@@ -28,8 +27,7 @@ const Checkbox: React.FunctionComponent<CheckboxProps> = ({
 
 Checkbox.defaultProps = {
   onChangeHandler: noop,
-  label: '',
-  onKeyHandler: noop
+  label: ''
 };
 
 export { Checkbox as default, Checkbox };

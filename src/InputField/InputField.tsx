@@ -13,8 +13,13 @@ const InputField: React.FunctionComponent<InputFieldProps> = ({
     <label htmlFor="text-field" className="label" data-label={label}>
       {label}
     </label>
-
-    <input id="text-field" type="text" placeholder={placeholder} />
+    <input
+      aria-label="text"
+      aria-placeholder={placeholder}
+      id="text-field"
+      placeholder={placeholder}
+      type="text"
+    />
   </div>
 );
 

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" [user-scalable=yes] />
+  <title>React UI Components</title>
+</head>
+
+<body>
+  <header>
+    <h1 aria-label="heading" aria-level="1">React UI Components</h1>
+  </header>
+  <main class="container-fluid" id="app"></main>
+  <% if(process.env.NODE_ENV === 'production') {%>
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+  <% } %>
+</body>
+
+</html>
