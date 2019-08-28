@@ -22,6 +22,9 @@
       "pre-commit": "npm run lint && npm run test -- --coverage"
     }
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "dist"
   ],
