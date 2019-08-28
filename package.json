@@ -22,6 +22,9 @@
       "pre-commit": "npm run lint && npm run test -- --coverage"
     }
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "dist"
   ],
@@ -83,6 +86,7 @@
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-prettier": "^3.1.0",
     "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
     "husky": "^3.0.4",
     "jest": "^24.9.0",
     "jest-cli": "^24.9.0",

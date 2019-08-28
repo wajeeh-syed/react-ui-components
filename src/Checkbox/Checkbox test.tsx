@@ -49,13 +49,4 @@ describe('<InputField />', () => {
 
     expect(wrapper.props().className).toBe('checkbox-container');
   });
-
-  it('should trigger keyEventHandler onKeyUp', () => {
-    const props = { label: 'A new label', onKeyHandler: jest.fn() };
-    makeWrapper(props);
-
-    wrapper.find('input').simulate('keyup');
-
-    expect(wrapper.props().onKeyHandler).toHaveBeenCalled();
-  });
 });

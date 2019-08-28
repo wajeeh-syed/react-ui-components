@@ -1,4 +1,6 @@
 const path = require('path');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+
 const resolveAliasPath = (dir: string) => path.join(__dirname, 'src', dir);
 
 module.exports = {
@@ -60,7 +62,12 @@ module.exports = {
   optimization: {
     minimize: false
   },
-  plugins: [],
+  plugins: [
+    new HTMLWebpackPlugin({
+      inject: true,
+      template: './src/index.html'
+    })
+  ],
   externals: {
     React: 'react',
     ReactDOM: 'react-dom'
