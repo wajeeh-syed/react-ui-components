@@ -23,7 +23,7 @@ if (process.env.NODE_ENV !== 'production') {
     axe(react_1.default, react_dom_1.default, 3000);
 }
 var App = function () { return (react_1.default.createElement(react_1.Fragment, null,
-    react_1.default.createElement(Checkbox_1.Checkbox, { label: "yes", onChangeHandler: function () { return console.log('hey'); }, onKeyHandler: function () { return console.log('hey'); } }),
-    react_1.default.createElement(InputField_1.InputField, null))); };
+    react_1.default.createElement(Checkbox_1.Checkbox, { label: "yes", onChangeHandler: function () { return console.log('hey'); } }),
+    react_1.default.createElement(InputField_1.InputField, { label: "Name: " }))); };
 react_dom_1.default.render(react_1.default.createElement(App, null), document.getElementById('app'));
 //# sourceMappingURL=index.js.map
