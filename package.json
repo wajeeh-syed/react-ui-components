@@ -58,7 +58,7 @@
     "@babel/polyfill": "^7.6.0",
     "@babel/preset-env": "^7.6.0",
     "@babel/preset-react": "^7.0.0",
-    "@babel/preset-typescript": "^7.3.3",
+    "@babel/preset-typescript": "^7.6.0",
     "@babel/register": "7.5.5",
     "@hot-loader/react-dom": "^16.9.0",
     "@types/enzyme": "^3.10.3",
