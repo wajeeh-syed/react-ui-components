@@ -101,7 +101,7 @@
     "source-map-loader": "^0.2.4",
     "start-server-and-test": "^1.10.0",
     "ts-jest": "^24.0.2",
-    "tsconfig-paths": "^3.8.0",
+    "tsconfig-paths": "^3.9.0",
     "typescript": "^3.5.3",
     "watch": "^1.0.2",
     "webpack": "4.39.3",
