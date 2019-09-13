@@ -12,7 +12,7 @@ var InputField = function (_a) {
     var label = _a.label, placeholder = _a.placeholder;
     return (React.createElement("div", { className: "hero" },
         React.createElement("label", { htmlFor: "text-field", className: "label", "data-label": label }, label),
-        React.createElement("input", { id: "text-field", type: "text", placeholder: placeholder })));
+        React.createElement("input", { "aria-label": "text", "aria-placeholder": placeholder, id: "text-field", placeholder: placeholder, type: "text" })));
 };
 exports.default = InputField;
 exports.InputField = InputField;

@@ -59,11 +59,5 @@ describe('<InputField />', function () {
         wrapper = enzyme_1.shallow(React.createElement(Checkbox_1.Checkbox, __assign({}, props)));
         expect(wrapper.props().className).toBe('checkbox-container');
     });
-    it('should trigger keyEventHandler onKeyUp', function () {
-        var props = { label: 'A new label', onKeyHandler: jest.fn() };
-        makeWrapper(props);
-        wrapper.find('input').simulate('keyup');
-        expect(wrapper.props().onKeyHandler).toHaveBeenCalled();
-    });
 });
 //# sourceMappingURL=Checkbox test.js.map
