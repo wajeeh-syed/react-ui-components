@@ -49,7 +49,7 @@
   },
   "homepage": "https://github.com/hafeez-syed/react-ui-components#readme",
   "devDependencies": {
-    "@babel/cli": "^7.7.5",
+    "@babel/cli": "^7.7.7",
     "@babel/core": "^7.7.5",
     "@babel/plugin-external-helpers": "^7.7.4",
     "@babel/plugin-proposal-class-properties": "^7.7.4",
